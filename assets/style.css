@@ -1,0 +1,22 @@
+
+:root{
+  --navy:#062a3b;
+  --accent:#1ea7a7;
+  --bg:#fbfbfa;
+  --muted:#6b6f76;
+}
+*{box-sizing:border-box}
+body{font-family:Inter, 'Open Sans', Arial; margin:0; background:var(--bg); color:#123;}
+.container{max-width:1100px;margin:0 auto;padding:28px;}
+header{display:flex;align-items:center;justify-content:space-between;}
+.brand{display:flex;align-items:center;gap:14px}
+.brand img{height:56px;width:auto;border-radius:8px}
+nav a{margin-left:14px;color:var(--navy);text-decoration:none;font-weight:600}
+.hero{display:flex;gap:24px;align-items:center;background:white;padding:28px;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,0.05);margin-top:18px}
+.hero h1{margin:0;font-size:28px;color:var(--navy)}
+.section{margin-top:28px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:white;padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.04)}
+.footer{margin-top:36px;padding:18px;color:var(--muted);font-size:14px}
+@media(max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}.hero{flex-direction:column;}}
+@media(max-width:560px){nav{display:none}}
