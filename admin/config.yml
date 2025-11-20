@@ -1,0 +1,40 @@
+backend:
+  name: git-gateway
+  branch: main # Branch to update (main)
+
+media_folder: "assets/uploads" # Media files will be stored in the repo under assets/uploads
+public_folder: "/assets/uploads"
+
+collections:
+  - name: "pages"
+    label: "Pagini"
+    files:
+      - file: "content/home.md"
+        label: "Acasă"
+        name: "home"
+        fields:
+          - {label: "Titlu", name: "title", widget: "string"}
+          - {label: "Subtitlu", name: "subtitle", widget: "string"}
+          - {label: "Hero image", name: "hero_image", widget: "image"}
+          - {label: "Body", name: "body", widget: "markdown"}
+      - file: "content/despre.md"
+        label: "Despre"
+        name: "despre"
+        fields:
+          - {label: "Titlu", name: "title", widget: "string"}
+          - {label: "Body", name: "body", widget: "markdown"}
+      - file: "content/produse.md"
+        label: "Produse"
+        name: "produse"
+        fields:
+          - {label: "Titlu", name: "title", widget: "string"}
+          - {label: "Body", name: "body", widget: "markdown"}
+
+  - name: "galerie"
+    label: "Galerie"
+    folder: "content/galerie"
+    create: true
+    fields:
+      - {label: "Titlu", name: "title", widget: "string"}
+      - {label: "Imagine", name: "image", widget: "image"}
+      - {label: "Descriere", name: "description", widget: "text"}
